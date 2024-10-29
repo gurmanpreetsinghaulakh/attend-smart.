@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #f4f4f4;
+    }
+        
+/* navbar */
+.navbar{
+    background-color: white;
+    color: #1F3965;
+    font-size: 18px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 60px;
+    align-items: center;
+    /* box-shadow: 0px 2px 12px 0px #1F3965; */
+}
+.logo-name{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.logo-name img{
+    height: 70px;
+}
+.nav-list ul{
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+
+}
+.nav-list ul li a{   
+    text-decoration: none;
+    color: #1F3965;
+}
+
+
+    /* main */
+    /* Basic reset and body styling */
+
+.section {
+    display: flex;
+    /* height: 100%; */
+    font-family: Arial, sans-serif;
+    color: #1F3965;
+}
+.section .left-sec {
+    height: 600px;
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.section .left-sec .profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section .left-sec .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.section .left-sec .profile h4 {
+    margin: 10px 0 0;
+}
+
+.section .left-sec .dashboard a {
+    display: block;
+    text-decoration: none;
+    color: #1F3965;
+    padding: 10px;
+    border-radius: 4px;
+}
+.section .left-sec .dashboard a:hover{
+    background-color: #f4f4f4;
+
+}
+
+.section .left-sec ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 7px;
+}
+
+.section .left-sec ul li {
+    margin-bottom: 10px;
+}
+
+.section .left-sec ul li a {
+    text-decoration: none;
+    color: #1F3965;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.section .left-sec ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+
+/* Right side section styling */
+.section .right-sec {
+    flex: 1;
+    margin-left: 0px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+}
+.section .right-sec .content:target {
+    display: block;
+}
+body:not(:has(:target)) #dashboard {
+    display: block;
+}
+.section .right-sec .content {
+    padding: 20px;
+}
+.section .right-sec .content {
+    display: none;
+}
+.section .right-sec .content h3{
+    margin-top: 0%;
+}
+
+
+.section .right-sec .content a{
+    text-decoration: none;
+    color: #1F3965;
+}
+
+
+/* dashboard */
+.section .right-sec .content .content-heading{
+    font-size: 25px;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: white;
+}
+.section .right-sec .content .content-heading h4{
+    margin: 0%;
+}
+
+.right-sec .dashboard-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dashboard-content-1 .options{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    text-align: center;
+}
+.dashboard-content-1 .options .add{
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.dashboard-content-1 .options .add:hover{
+    text-decoration: underline;
+}
+.dashboard-content-1 .notification{
+    background-color: white;
+    width: 600px;
+    padding: 10px 50px;
+
+    border-radius: 10px;
+}
+.dashboard-content-1 .notification .send-buttons{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 15px;
+}
+.dashboard-content-1 .notification button{
+    padding: 5px 10px ;
+    background-color: white;
+    color: #1F3965;
+    border-radius: 20px;
+    border: 1px solid #1F3965;
+    /* background-color: #1F3965;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #1F3965; */
+}
+.dashboard-content-1 .notification button:hover{
+
+    /* background-color: white;
+    color: #1F3965;
+    border-radius: 20px;
+    border: 1px solid #1F3965; */
+    background-color: #1F3965;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #1F3965;
+    cursor: pointer;
+}
+.dashboard-content-1 .time-table{
+    
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 20px 0px;
+    border: 1px solid #f4f4f4;
+}
+.dashboard-content-1 table th,table td{
+
+    background-color: white;
+    border: 1px solid #f4f4f4;
+    padding: 5px;
+    height: 25px;
+    width: 70px;
+}
+.dashboard-content-2{
+
+    text-align: center;
+}
+.dashboard-content-2 input{
+    margin-bottom: 20px;
+    width: 190px;
+    height: 20px;
+    padding: 5px 10px;
+    color: #1F3965;
+    border: 1px solid #1F3965;
+    border-radius: 20px;
+}
+.dashboard-content-2 .total{
+    background-color: white;
+    width: 200px;
+    padding: 10px ;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* change password */
+
+.right-sec .content .change-password{
+    background-color: white;
+    width: 300px;
+    text-align: center;
+    padding: 10px 50px;
+    border-radius: 20px;
+}
+.right-sec .content .change-password input{
+    padding: 10px ;
+    width: 250px;
+    margin: 10px;
+    margin-left: 15px;
+}
+.right-sec .content .change-password button{
+
+    padding: 5px 20px ;
+    margin-top: 10px;
+    background-color: white;
+    color: #1F3965;
+    border: 1px solid #1F3965;
+    border-radius: 10px;
+
+}
+.right-sec .content .change-password button:hover{
+
+
+    color: white;
+    background-color: #1F3965;
+    cursor: pointer;
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo-name">
+                <img src="Logo.png" alt="">
+                <p>ATTEND SMART</p>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="student_inter.html">HOME</a></li>
+                    <li><a href="stu_contact_us.html">CONTACT US</a></li>
+                    <li><a href="stu_about_us.html">ABOUT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+        <main>
+            <div class="section">
+                <div class="left-sec">
+                    <div class="profile">
+                        <img src="p5.png" alt="Profile Picture">
+                        <h4>Username</h4>
+                    </div>
+                    <div class="dashboard">
+                        <a href="#dashboard">Dashboard</a>
+                    </div>
+                    <ul>
+                        <li><a href="#authentication">Authentication</a></li>
+                        <!-- <li><a href="#faqs">Faqs</a></li> -->
+                        <li><a href="index.html">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="right-sec">
+                    <!-- dasboard -->
+                    <div id="dashboard" class="content">
+                        <div class="content-heading">
+                            <h4>Dashboard</h4>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="dashboard-content-1">
+                                <div class="notification">
+                                    <h4>NOTIFICATIONS</h4><hr>
+                                    <div id="student-notifications"></div>
+                                </div>
+                                <div class="time-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Time</th>
+                                                <th>Mon</th>
+                                                <th>Tue</th>
+                                                <th>Wed</th>
+                                                <th>Thu</th>
+                                                <th>Fri</th>
+                                                <th>Sat</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>9:00</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:00</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>11:00</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>12:00</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>1:00</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2:00</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3:00</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-2">
+                                <input type="date">
+                                <div class="total">
+                                    <h4>Total Classes</h4>
+                                    <p>00</p>
+                                </div>
+                                <div class="total">
+                                    <h4>Present</h4>
+                                    <p>00</p>
+                                </div>
+                                <div class="total">
+                                    <h4>Absent</h4>
+                                    <p>00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="authentication" class="content">
+                        <h3>Authentication</h3>
+                        <div class="change-password">
+                            <h4>Change Password</h4>
+                            <hr>
+                            <form action="">
+                                <input type="password" placeholder="Old Password"><br>
+                                <input type="password" placeholder="New Password"><br>
+                                <button>Save</button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="faqs" class="content">FAQs</div>
+                </div>
+            </div>
+        </main>
+        
+    <script>
+        // function toggleContent(element) {
+        // element.classList.toggle('expanded');
+        // }
+
+
+        function toggleContent(event) {
+            event.stopPropagation(); // Prevents the event from bubbling up to the parent element
+            var facBox = event.target.closest('.fac-box');
+            facBox.classList.toggle('expanded');
+        }
+
+
+
+        function markAttendance(rollNo, status) {
+            // json parse converts string into javascript abject
+            let attendanceData = JSON.parse(localStorage.getItem('attendanceData')) || {};
+
+            if (!attendanceData[rollNo]) {
+                attendanceData[rollNo] = {
+                    name: `Student ${rollNo}`,
+                    rollNo: rollNo,
+                    present: 0,
+                    absent: 0,
+                    totalClasses: 0
+                };
+            }
+
+            attendanceData[rollNo].totalClasses += 1;
+            if (status === 'present') {
+                attendanceData[rollNo].present += 1;
+            } else {
+                attendanceData[rollNo].absent += 1;
+            }
+
+            attendanceData[rollNo].percentage = (attendanceData[rollNo].present / attendanceData[rollNo].totalClasses) * 100;
+
+            localStorage.setItem('attendanceData', JSON.stringify(attendanceData));
+
+            // alert(`Attendance marked for Student ${rollNo}`);
+        }
+
+
+
+        const attendanceData = JSON.parse(localStorage.getItem('attendanceData')) || {};
+        const recordsTable = document.getElementById('recordsTable');
+// object.value will return the values as array
+// here we are storing each values in the stydent which is an object so we can easily fetch
+        Object.values(attendanceData).forEach(student => {
+            // here inserted a row
+            const row = recordsTable.insertRow();
+            // and for each row cells
+            row.insertCell(0).textContent = student.name;
+            row.insertCell(1).textContent = student.rollNo;
+            row.insertCell(2).textContent = student.present;
+            row.insertCell(3).textContent = student.absent;
+            row.insertCell(4).textContent = student.totalClasses;
+            row.insertCell(5).textContent = student.percentage.toFixed(2) + '%';
+        });
+
+        function refresh(){
+            localStorage.clear();
+            location.reload();
+        }
+
+        window.onload = function() {
+        const studentNotifications = JSON.parse(localStorage.getItem("studentNotifications")) || [];
+        displayNotifications(studentNotifications, 'student-notifications');
+    };
+    
+    function displayNotifications(notifications, containerId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = ''; // Clear previous notifications
+    
+        notifications.forEach((notification, index) => {
+            const notificationDiv = document.createElement('div');
+            notificationDiv.classList.add('notification-item');
+            
+            const messageP = document.createElement('p');
+            messageP.textContent = notification;
+            
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'Remove';
+            removeButton.onclick = function() {
+                removeNotification(index, 'studentNotifications', containerId);
+            };
+            
+            notificationDiv.appendChild(messageP);
+            notificationDiv.appendChild(removeButton);
+            container.appendChild(notificationDiv);
+        });
+    }
+    
+    function removeNotification(index, storageKey, containerId) {
+        let notifications = JSON.parse(localStorage.getItem(storageKey)) || [];
+        notifications.splice(index, 1);
+        localStorage.setItem(storageKey, JSON.stringify(notifications));
+        displayNotifications(notifications, containerId);
+    }
+    </script>    
+</body>
+</html>

@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #f4f4f4;
+    }
+        
+/* navbar */
+.navbar{
+    background-color: white;
+    color: #1F3965;
+    font-size: 18px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 60px;
+    align-items: center;
+    /* box-shadow: 0px 2px 12px 0px #1F3965; */
+}
+.logo-name{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.logo-name img{
+    height: 70px;
+}
+.nav-list ul{
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+
+}
+.nav-list ul li a{   
+    text-decoration: none;
+    color: #1F3965;
+}
+
+
+    /* main */
+
+.section {
+    display: flex;
+    /* height: 100%; */
+    font-family: Arial, sans-serif;
+    color: #1F3965;
+}
+.section .left-sec {
+    height: 600px;
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+.section .left-sec .profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section .left-sec .profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.section .left-sec .profile h4 {
+    margin: 10px 0 0;
+}
+
+.section .left-sec .dashboard a {
+    display: block;
+    text-decoration: none;
+    color: #1F3965;
+    padding: 10px;
+    border-radius: 4px;
+}
+.section .left-sec .dashboard a:hover{
+    background-color: #f4f4f4;
+
+}
+
+.section .left-sec ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 7px;
+}
+
+.section .left-sec ul li {
+    margin-bottom: 10px;
+}
+
+.section .left-sec ul li a {
+    text-decoration: none;
+    color: #1F3965;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.section .left-sec ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+
+
+/* Right side section styling */
+.section .right-sec {
+    flex: 1;
+    margin-left: 0px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); */
+}
+.section .right-sec .content:target {
+    display: block;
+}
+body:not(:has(:target)) #dashboard {
+    display: block;
+}
+.section .right-sec .content {
+    padding: 20px;
+}
+.section .right-sec .content {
+    display: none;
+}
+.section .right-sec .content h3{
+    margin-top: 0%;
+}
+
+
+.section .right-sec .content a{
+    text-decoration: none;
+    color: #1F3965;
+}
+
+
+/* dashboard */
+.section .right-sec .content .content-heading{
+    font-size: 25px;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: white;
+}
+.section .right-sec .content .content-heading h4{
+    margin: 0%;
+}
+
+.right-sec .dashboard-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dashboard-content-1 .options{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    text-align: center;
+}
+.dashboard-content-1 .options .add{
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+.dashboard-content-1 .options .add:hover{
+    text-decoration: underline;
+}
+.dashboard-content-1 .notification{
+    background-color: white;
+    padding: 10px 50px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.dashboard-content-1 .notification .send-buttons{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    margin-top: 15px;
+}
+.dashboard-content-1 .notification button{
+    padding: 5px 10px ;
+    background-color: white;
+    color: #1F3965;
+    border-radius: 20px;
+    border: 1px solid #1F3965;
+    /* background-color: #1F3965;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #1F3965; */
+}
+.dashboard-content-1 .notification button:hover{
+
+    /* background-color: white;
+    color: #1F3965;
+    border-radius: 20px;
+    border: 1px solid #1F3965; */
+    background-color: #1F3965;
+    color: white;
+    border-radius: 20px;
+    border: 1px solid #1F3965;
+    cursor: pointer;
+}
+.dashboard-content-2{
+
+    text-align: center;
+}
+.dashboard-content-2 input{
+    margin-bottom: 20px;
+    width: 190px;
+    height: 20px;
+    padding: 5px 10px;
+    color: #1F3965;
+    border: 1px solid #1F3965;
+    border-radius: 20px;
+}
+.dashboard-content-2 .total{
+    background-color: white;
+    width: 200px;
+    padding: 10px ;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+/* mark attendance  */
+
+/* .content{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-evenly;
+    text-align: center;
+    padding-top: 30px;
+    margin-left: 290px;
+    align-items: center;
+} */
+.fac-box{
+    margin-top: 30px;
+    margin-left: 45px;
+
+}
+.fac-content{
+    width: 880px ;
+    background-color: #FFFBFB;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding: 10px;
+    padding-left: 30px;
+    cursor: pointer;
+}    
+.fac-content:hover{
+    background-color: #FFFBFB;
+    box-shadow: 0px 0px 15px -8px #1F3965;
+}
+.fac-content .toggle-button {
+    background-color: #1F3965;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.fac-content .toggle-button:active{
+    background-color: white;
+    color: #1F3965;
+}
+.fac-content-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fac-box .hidden-content {
+    display: none; 
+    margin-top: 10px;
+}
+
+.fac-box.expanded .hidden-content {
+    display: block; 
+    
+}
+
+
+
+.hidden-content table{
+    margin: 30px;
+    width: 800px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+.hidden-content table th,td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #1F3965;
+}
+.hidden-content table .present-green{
+    color: green;
+    padding: 5px 15px;
+    border-radius: 7px;
+    background-color: white;
+    border: 1px solid green;
+    cursor: pointer;
+}
+.hidden-content table .present-green:active{
+    color: white;
+    border-radius: 5px;
+    background-color: green;
+}
+.hidden-content table .absent-red{
+    color: red;
+    padding: 5px 15px;
+    border-radius: 7px;
+    background-color: white;
+    border: 1px solid red;
+    cursor: pointer;
+}
+.hidden-content table .absent-red:active{
+    color: white;
+    border-radius: 5px;
+    background-color: red;
+}
+
+
+
+
+
+
+/* faculty */
+.hidden-content input{
+    height: 22px;
+    width: 200px;
+    border: 1px solid #1F3965;
+    border-radius: 5px;
+}
+.hidden-content button{
+    color: #1F3965;
+}
+
+
+
+/* change password */
+
+.right-sec .content .change-password{
+    background-color: white;
+    width: 300px;
+    text-align: center;
+    padding: 10px 50px;
+    border-radius: 20px;
+}
+.right-sec .content .change-password input{
+    padding: 10px ;
+    width: 250px;
+    margin: 10px;
+    margin-left: 15px;
+}
+.right-sec .content .change-password button{
+
+    padding: 5px 20px ;
+    margin-top: 10px;
+    background-color: white;
+    color: #1F3965;
+    border: 1px solid #1F3965;
+    border-radius: 10px;
+
+}
+.right-sec .content .change-password button:hover{
+    color: white;
+    background-color: #1F3965;
+    cursor: pointer;
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo-name">
+                <img src="Logo.png" alt="">
+                <p>ATTEND SMART</p>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="faculty_inter.html">HOME</a></li>
+                    <li><a href="fac_contact_us.html">CONTACT US</a></li>
+                    <li><a href="fac_about_us.html">ABOUT US</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+        <main>
+            <div class="section">
+                <div class="left-sec">
+                    <div class="profile">
+                        <img src="p5.png" alt="Profile Picture">
+                        <h4>Username</h4>
+                    </div>
+                    <div class="dashboard">
+                        <a href="#dashboard">Dashboard</a>
+                    </div>
+                    <ul>
+                        <li><a href="#classes">Classes</a></li>
+                        <li><a href="#add-student">Add Student</a></li>
+                        <li><a href="#mark-attendance">Mark Attendance</a></li>
+                        <li><a href="#records">Records</a></li>
+                        <li><a href="#authentication">Authentication</a></li>
+                        <li><a href="#faqs">Faqs</a></li>
+                        <li><a href="index.html">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="right-sec">
+                    <!-- dasboard -->
+                    <div id="dashboard" class="content">
+                        <div class="content-heading">
+                            <h4>Dashboard</h4>
+                        </div>
+                        <div class="dashboard-content">
+                            <div class="dashboard-content-1">
+                                <div class="options">
+                                    <div class="add">
+                                        <a href="#mark-attendance"><h4>MARK ATTENDANCE</h4></a>
+                                    </div>
+                                    <div class="add">
+                                        <a href="#records"><h4>RECORDS</h4></a>
+                                    </div>
+                                </div>
+                                <div class="notification">
+                                    <h4>SEND NOTIFICATION</h4>
+                                    <form>
+                                        <textarea id="send-notification" rows="8" cols="68" placeholder="Type Your Message here..."></textarea>
+                                        <div class="send-buttons">
+                                            <button type="button" onclick="sendToStudent()">SEND TO STUDENT</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="rec-notification" style="background-color: white;padding: 20px;margin-top: 10px;">
+                                    <h4>NOTIFICATIONS</h4>
+                                    <div id="faculty-notifications"></div>
+                                </div>
+                            </div>
+                            <div class="dashboard-content-2">
+                                <input type="date">
+                                <div class="total">
+                                    <h4>Total Students</h4>
+                                    <p>00</p>
+                                </div>
+                                <div class="total">
+                                    <h4>Present</h4>
+                                    <p>00</p>
+                                </div>
+                                <div class="total">
+                                    <h4>Absent</h4>
+                                    <p>00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- add class -->
+                    <div id="classes" class="content">
+                        <h3>Classes</h3>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS A</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                            
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Faculty</th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td> Faculty</td>
+                                            <td>Faculty 1</td>
+                                            <td>faculty1</td>
+                                           
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Username</th>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Student 1</td>
+                                            <td>1</td>
+                                            <td>student1</td>
+                                            </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td>student2</td></tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td>student3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td>student5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td>student4</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS B</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                            
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Faculty</th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td> Faculty</td>
+                                            <td>Faculty 1</td>
+                                            <td>faculty1</td>
+                                           
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Username</th>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Student 1</td>
+                                            <td>1</td>
+                                            <td>student1</td>
+                                            </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td>student2</td></tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td>student3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td>student5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td>student4</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS C</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                            
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Faculty</th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td> Faculty</td>
+                                            <td>Faculty 1</td>
+                                            <td>faculty1</td>
+                                           
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Username</th>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Student 1</td>
+                                            <td>1</td>
+                                            <td>student1</td>
+                                            </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td>student2</td></tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td>student3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td>student5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td>student4</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS D</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                            
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Faculty</th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td> Faculty</td>
+                                            <td>Faculty 1</td>
+                                            <td>faculty1</td>
+                                           
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Username</th>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Student 1</td>
+                                            <td>1</td>
+                                            <td>student1</td>
+                                            </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td>student2</td></tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td>student3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td>student5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td>student4</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS E</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                            
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Faculty</th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td> Faculty</td>
+                                            <td>Faculty 1</td>
+                                            <td>faculty1</td>
+                                           
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Username</th>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Student 1</td>
+                                            <td>1</td>
+                                            <td>student1</td>
+                                            </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td>student2</td></tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td>student3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td>student5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td>student4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td>student4</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4>ADD CLASS</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                            
+                                <div class="hidden-content">
+                                    <h3></h3>
+                                    <table>
+                                        <tr>
+                                            <th>CLASS NAME</th>
+                                            <th><input type="text"></th>
+                                            <th><button>+ADD</button></th>
+
+                                        </tr>
+                                        
+                                    </table>
+                                    
+                                    
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+
+                    <!-- Add student -->
+                    <div id="add-student" class="content">
+                        <h3>Add Student</h3>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS A</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th></th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Faculty</td>
+                                            <td>Faculty 1</td>
+                                            <td>faculty1</td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Add Student : </td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+            
+                                        </tr>
+                                    </table>
+                                    <button style="margin-left: 750px;">Save</button>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS B</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th></th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Current Faculty</td>
+                                            <td>Faculty 2</td>
+                                            <td>faculty2</td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Add Faculty : </td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+            
+                                        </tr>
+                                        <tr>
+                                            <td>Change Faculty:</td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+                        
+                                        </tr>
+                                       
+                                    </table>
+                                    <button style="margin-left: 750px;">Save</button>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS C</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th></th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Current Faculty</td>
+                                            <td>Faculty 3</td>
+                                            <td>faculty3</td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Add Faculty : </td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+            
+                                        </tr>
+                                        <tr>
+                                            <td>Change Faculty:</td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+                        
+                                        </tr>
+                                       
+                                    </table>
+                                    <button style="margin-left: 750px;">Save</button>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS D</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th></th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Current Faculty</td>
+                                            <td>Faculty 4</td>
+                                            <td>faculty4</td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Add Faculty : </td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+            
+                                        </tr>
+                                        <tr>
+                                            <td>Change Faculty:</td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+                        
+                                        </tr>
+                                       
+                                    </table>
+                                    <button style="margin-left: 750px;">Save</button>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS E</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th></th>
+                                            <th>Name</th>
+                                            <th>Username</th>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Current Faculty</td>
+                                            <td>Faculty 5</td>
+                                            <td>faculty5</td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>Add Faculty : </td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+            
+                                        </tr>
+                                        <tr>
+                                            <td>Change Faculty:</td>
+                                            <td><input type="text"></td>
+                                            <td><input type="text"></td>
+                        
+                                        </tr>
+                                       
+                                    </table>
+                                    <button style="margin-left: 750px;">Save</button>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                    
+                    <!-- Mark-Attendance  -->
+                    <div id="mark-attendance" class="content">
+                        <h3>Mark Attendance <input type="date" style="margin-left: 680px;"></h3>
+                        
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS A</h4>
+                                    
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                            
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 1</td>
+                                            <td>1</td>
+                                            <td><button class="present-green" onclick="markAttendance(1, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(1, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td><button class="present-green" onclick="markAttendance(2, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(2, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td><button class="present-green" onclick="markAttendance(3, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(3, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td><button class="present-green" onclick="markAttendance(5, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(5, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td><button class="present-green" onclick="markAttendance(6, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(6, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td><button class="present-green" onclick="markAttendance(7, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(7, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td><button class="present-green" onclick="markAttendance(8, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(8, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td><button class="present-green" onclick="markAttendance(9, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(9, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td><button class="present-green" onclick="markAttendance(10, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(10, 'absent')">Absent</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS B</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 11</td>
+                                            <td>11</td>
+                                            <td><button class="present-green" onclick="markAttendance(11, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(11, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td><button class="present-green" onclick="markAttendance(2, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(2, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td><button class="present-green" onclick="markAttendance(3, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(3, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td><button class="present-green" onclick="markAttendance(5, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(5, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td><button class="present-green" onclick="markAttendance(6, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(6, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td><button class="present-green" onclick="markAttendance(7, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(7, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td><button class="present-green" onclick="markAttendance(8, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(8, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td><button class="present-green" onclick="markAttendance(9, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(9, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td><button class="present-green" onclick="markAttendance(10, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(10, 'absent')">Absent</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS C</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 1</td>
+                                            <td>1</td>
+                                            <td><button class="present-green" onclick="markAttendance(1, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(1, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td><button class="present-green" onclick="markAttendance(2, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(2, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td><button class="present-green" onclick="markAttendance(3, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(3, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td><button class="present-green" onclick="markAttendance(5, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(5, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td><button class="present-green" onclick="markAttendance(6, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(6, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td><button class="present-green" onclick="markAttendance(7, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(7, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td><button class="present-green" onclick="markAttendance(8, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(8, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td><button class="present-green" onclick="markAttendance(9, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(9, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td><button class="present-green" onclick="markAttendance(10, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(10, 'absent')">Absent</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS D</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 1</td>
+                                            <td>1</td>
+                                            <td><button class="present-green" onclick="markAttendance(1, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(1, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td><button class="present-green" onclick="markAttendance(2, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(2, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td><button class="present-green" onclick="markAttendance(3, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(3, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td><button class="present-green" onclick="markAttendance(5, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(5, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td><button class="present-green" onclick="markAttendance(6, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(6, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td><button class="present-green" onclick="markAttendance(7, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(7, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td><button class="present-green" onclick="markAttendance(8, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(8, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td><button class="present-green" onclick="markAttendance(9, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(9, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td><button class="present-green" onclick="markAttendance(10, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(10, 'absent')">Absent</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS E</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 1</td>
+                                            <td>1</td>
+                                            <td><button class="present-green" onclick="markAttendance(1, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(1, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 2</td>
+                                            <td>2</td>
+                                            <td><button class="present-green" onclick="markAttendance(2, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(2, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 3</td>
+                                            <td>3</td>
+                                            <td><button class="present-green" onclick="markAttendance(3, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(3, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 4</td>
+                                            <td>4</td>
+                                            <td><button class="present-green" onclick="markAttendance(4, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(4, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 5</td>
+                                            <td>5</td>
+                                            <td><button class="present-green" onclick="markAttendance(5, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(5, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 6</td>
+                                            <td>6</td>
+                                            <td><button class="present-green" onclick="markAttendance(6, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(6, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 7</td>
+                                            <td>7</td>
+                                            <td><button class="present-green" onclick="markAttendance(7, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(7, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 8</td>
+                                            <td>8</td>
+                                            <td><button class="present-green" onclick="markAttendance(8, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(8, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 9</td>
+                                            <td>9</td>
+                                            <td><button class="present-green" onclick="markAttendance(9, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(9, 'absent')">Absent</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Student 10</td>
+                                            <td>10</td>
+                                            <td><button class="present-green" onclick="markAttendance(10, 'present')">Present</button></td>
+                                            <td><button class="absent-red" onclick="markAttendance(10, 'absent')">Absent</button></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div> 
+                    </div>
+
+                    <!-- reccords -->
+                    <div id="records" class="content">
+                        <h3>Records<input type="date" style="margin-left: 760px;"></h3>
+
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS A</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table >
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Total Classes</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                        <tbody id="recordsTable">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS B</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table >
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Total Classes</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                        <tbody id="recordsTable">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS C</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table >
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Total Classes</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                        <tbody id="recordsTable">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS D</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table >
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Total Classes</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                        <tbody id="recordsTable">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="fac-box">
+                            <div class="fac-content">
+                                <div class="fac-content-heading">
+                                    <h4> CLASS E</h4>
+                                    <button class="toggle-button" onclick="toggleContent(event)">></button>
+                                </div>
+                                <div class="hidden-content">
+                                    <table >
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Roll No</th>
+                                            <th>Present</th>
+                                            <th>Absent</th>
+                                            <th>Total Classes</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                        <tbody id="recordsTable">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>  
+                        </div>
+
+                        <button onclick="refresh()" style="margin-top: 40px;margin-left: 440px;padding: 5px 10px; border-radius: 5px ;color: white;background-color: #1F3965;border: 1px solid #1F3965;cursor: pointer;" >DELETE RECORDS</button>
+                    </div>
+
+                    <div id="authentication" class="content">
+                        <h3>Authentication</h3>
+                        <div class="change-password">
+                            <h4>Change Password</h4>
+                            <hr>
+                            <form action="">
+                                <input type="password" placeholder="Old Password"><br>
+                                <input type="password" placeholder="New Password"><br>
+                                <button>Save</button>
+                            </form>
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="faqs" class="content">FAQs</div>
+                </div>
+            </div>
+        </main>
+
+            <script>
+                        // function toggleContent(element) {
+            // element.classList.toggle('expanded');
+            // }
+
+            
+                // Function to toggle content visibility
+                function toggleContent(event) {
+                    event.stopPropagation(); // Prevents the event from bubbling up to the parent element
+                    var facBox = event.target.closest('.fac-box');
+                    facBox.classList.toggle('expanded');
+                }
+            
+                // Asynchronous function to mark attendance
+                async function markAttendance(rollNo, status) {
+                    // Parse attendance data from localStorage
+                    let attendanceData = JSON.parse(localStorage.getItem('attendanceData')) || {};
+            
+                    if (!attendanceData[rollNo]) {
+                        attendanceData[rollNo] = {
+                            name: `Student ${rollNo}`,
+                            rollNo: rollNo,
+                            present: 0,
+                            absent: 0,
+                            totalClasses: 0
+                        };
+                    }
+            
+                    attendanceData[rollNo].totalClasses += 1;
+                    if (status === 'present') {
+                        attendanceData[rollNo].present += 1;
+                    } else {
+                        attendanceData[rollNo].absent += 1;
+                    }
+            
+                    attendanceData[rollNo].percentage = (attendanceData[rollNo].present / attendanceData[rollNo].totalClasses) * 100;
+            
+                    // Simulating an asynchronous operation with a Promise
+                    await new Promise(resolve => {
+                        localStorage.setItem('attendanceData', JSON.stringify(attendanceData));
+                        resolve();
+                    });
+                }
+            
+                // Function to load attendance data into the records table
+                async function loadAttendanceData() {
+                    const attendanceData = JSON.parse(localStorage.getItem('attendanceData')) || {};
+                    const recordsTable = document.getElementById('recordsTable');
+            
+                    Object.values(attendanceData).forEach(student => {
+                        const row = recordsTable.insertRow();
+                        row.insertCell(0).textContent = student.name;
+                        row.insertCell(1).textContent = student.rollNo;
+                        row.insertCell(2).textContent = student.present;
+                        row.insertCell(3).textContent = student.absent;
+                        row.insertCell(4).textContent = student.totalClasses;
+                        row.insertCell(5).textContent = student.percentage.toFixed(2) + '%';
+                    });
+                }
+            
+                // Asynchronous function to refresh the page and clear localStorage
+                async function refresh() {
+                    await new Promise(resolve => {
+                        localStorage.clear();
+                        resolve();
+                    });
+                    location.reload();
+                }
+            
+                // Asynchronous function to send notification to students
+                async function sendToStudent() {
+                    const message = document.getElementById("send-notification").value;
+                    if (message.trim()) {
+                        let notifications = JSON.parse(localStorage.getItem("studentNotifications")) || [];
+                        notifications.push(message);
+                        await new Promise(resolve => {
+                            localStorage.setItem("studentNotifications", JSON.stringify(notifications));
+                            resolve();
+                        });
+                        alert("Notification sent to Student");
+                        document.getElementById("send-notification").value = ''; // Clear textarea
+                    }
+                }
+            
+                // Load faculty notifications on window load
+                window.onload = async function() {
+                    const facultyNotifications = JSON.parse(localStorage.getItem("facultyNotifications")) || [];
+                    await displayNotifications(facultyNotifications, 'faculty-notifications');
+                    await loadAttendanceData(); // Load attendance data on page load
+                };
+            
+                // Asynchronous function to display notifications
+                async function displayNotifications(notifications, containerId) {
+                    const container = document.getElementById(containerId);
+                    container.innerHTML = ''; // Clear previous notifications
+            
+                    notifications.forEach((notification, index) => {
+                        const notificationDiv = document.createElement('div');
+                        notificationDiv.classList.add('notification-item');
+                        
+                        const messageP = document.createElement('p');
+                        messageP.textContent = notification;
+                        
+                        const removeButton = document.createElement('button');
+                        removeButton.textContent = 'Remove';
+                        removeButton.onclick = async function() {
+                            await removeNotification(index, 'facultyNotifications', containerId);
+                        };
+                        
+                        notificationDiv.appendChild(messageP);
+                        notificationDiv.appendChild(removeButton);
+                        container.appendChild(notificationDiv);
+                    });
+                }
+            
+                // Asynchronous function to remove a notification
+                async function removeNotification(index, storageKey, containerId) {
+                    let notifications = JSON.parse(localStorage.getItem(storageKey)) || [];
+                    notifications.splice(index, 1);
+                    await new Promise(resolve => {
+                        localStorage.setItem(storageKey, JSON.stringify(notifications));
+                        resolve();
+                    });
+                    await displayNotifications(notifications, containerId);
+                }
+            </script>    
+</body>
+</html>

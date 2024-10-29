@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            width: 600px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #1F3965;
+            margin-bottom: 20px;
+        }
+
+        .membership-options {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .option {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            width: 30%;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option:hover {
+            border-color: #1F3965;
+        }
+
+        .option h3 {
+            margin-bottom: 10px;
+            color: #1F3965;
+        }
+
+        .option p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .btn {
+            background-color: #1F3965;
+            color: white;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            color: #1F3965;
+            background-color: white ;
+            border: 1px solid black;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Choose Your Membership Plan</h2>
+        <div class="membership-options">
+            <div class="option" onclick="selectPlan('Free')">
+                <h3>Free</h3>
+                <p>Access basic features and attendance tracking.</p>
+            </div>
+            <div class="option" onclick="selectPlan('Monthly')">
+                <h3>Monthly</h3>
+                <p>Get advanced features for Rs99/month.</p>
+            </div>
+            <div class="option" onclick="selectPlan('Annual')">
+                <h3>Annual</h3>
+                <p>Save with a yearly plan for Rs999/year.</p>
+            </div>
+        </div>
+        <button class="btn" onclick="confirmSelection()">Confirm Membership</button>
+        <div class="message">
+            <p>Already a member? <a href="login.html">Login here</a></p>
+        </div>
+    </div>
+
+    <!-- <script>
+        let selectedPlan = '';
+
+        function selectPlan(plan) {
+            selectedPlan = plan;
+            alert('You selected: ' + plan);
+        }
+
+        function confirmSelection() {
+            if (selectedPlan) {
+                alert('Membership confirmed: ' + selectedPlan);
+            } else {
+                alert('Please select a membership plan.');
+            }
+        }
+    </script> -->
+</body>
+</html>
